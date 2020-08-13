@@ -102,6 +102,7 @@ class Article extends Component {
 	}
 
 	shouldComponentUpdate(nextProps, nextState){
+    console.log('shouldComponentUpdate')
 		return this.state.isOpen !== nextState.isOpen
 	}
 
@@ -109,7 +110,8 @@ class Article extends Component {
 		console.log('componentWillUpdate')
 	}
 
-	componentWillReceiveProps(nextProps){
+	UNSAFE_componentWillReceiveProps(nextProps){
+    console.log('componentWillReceiveProps')
 		if (nextProps.defaultOpen !== this.props.defaultOpen) {
 			this.setState({
 				isOpen: nextProps.defaultOpen

@@ -20,18 +20,18 @@ class App extends Component {
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-			  <NavLink to="/" className="navbar-brand">Navbar</NavLink>
-			  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			    <span className="navbar-toggler-icon"></span>
-			  </button>
-			  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-			    <div className="navbar-nav">
-			      <NavLink exact to="/" className="nav-item nav-link active">Home <span className="sr-only">(current)</span></NavLink>
-			      <NavLink to="/about" className="nav-item nav-link">About Us</NavLink>
-			      <NavLink to="/signup" className="nav-item nav-link">Sign Up</NavLink>
-			    </div>
-			  </div>
-		  </nav>
+            <NavLink to="/" className="navbar-brand">Navbar</NavLink>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav">
+                <NavLink exact to="/" className="nav-item nav-link active">Home <span className="sr-only">(current)</span></NavLink>
+                <NavLink to="/about" className="nav-item nav-link">About Us</NavLink>
+                <NavLink to="/signup" className="nav-item nav-link">Sign Up</NavLink>
+              </div>
+            </div>
+          </nav>
     
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>

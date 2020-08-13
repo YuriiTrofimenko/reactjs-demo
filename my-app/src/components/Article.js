@@ -23,13 +23,15 @@ import React from 'react';
 
 function Article(props) {
 	console.log(props);
-	const {article} = props
+	const {article, demostring, demoflag} = props
 	const content = <section>{article.content}</section>
 	return (
 		<div>
 			<h2>{article.title}</h2>
 			<section>{content}</section>
 			<section>{(new Date(article.date)).toDateString()}</section>
+      <section>{demostring}</section>
+      <section>{demoflag ? 'true' : 'false'}</section>
 		</div>
 	)
 }

@@ -52,7 +52,7 @@ class Article extends Component {
 				</div>
 				<div className="card-body">
 					<section className="card-subtitle text-muted">{(new Date(article.date)).toDateString()}</section>
-					<section>{content}</section>
+					{content}
 				</div>
 			</div>
 		)

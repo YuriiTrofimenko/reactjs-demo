@@ -1,7 +1,7 @@
 /* Заказной компонент App v4.1 */
 
 //Импорт основного компонента React.js
-/*import React from 'react';
+/* import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ArticleList from './ArticleList'
 import articles from '../articles'
@@ -17,7 +17,7 @@ function App() {
 	)
 }
 
-export default App*/
+export default App */
 
 /* Заказной компонент App vv4.2, 4.3 */
 
@@ -36,9 +36,9 @@ class App extends Component {
 			<div className="container">
 				<div className="jumbotron">
 					<h1 className="display-3">My App</h1>
-					<button className="btn" onClick={this.revert}>Revert</button>
+					<button className="btn btn-secondary" onClick={this.revert}>Revert</button>
 				</div>
-				{/*<ArticleList articles={ this.state.reverted ? articles.reverse() : articles} />*/}
+				{/* <ArticleList articles={ this.state.reverted ? articles.reverse() : articles} /> */}
 				<ArticleList articles={ this.state.reverted ? articles.slice().reverse() : articles} />
 			</div>
 		)

@@ -6,16 +6,22 @@ import React, {Component} from 'react';
 
 class Article extends Component {
 	
-	// //Старый синтаксис инициализации состояния -
-	// //в конструкторе компонента
-	// constructor(props){
-	// 	super(props)
-	// 	this.state = {
-	// 		isOpen: true
-	// 	}
-	// 	//Старый синтаксис инициализации свойства функцией
-	// 	this.handleClick = handleClick.bind(this)
-	// }
+	//Старый синтаксис инициализации состояния -
+	//в конструкторе компонента
+	/*constructor(props){
+		super(props)
+		this.state = {
+			isOpen: true
+		}
+    //Старый синтаксис инициализации свойства функцией
+    // bind - функция, встроенная в язык js
+    // 1. в правой части выражения указываем, что когда пользовательская функция handleClick
+    // будет вызвана, она бужет вызвана на объекте this,
+    // то есть на текущем экземпляре компонента Article
+    // 2. в левой части выражения создаем свойство
+    // экземпляра компонента Article и сохраняем в него настроенную версию функции handleClick
+		this.handleClick = handleClickExternal.bind(this)
+	}*/
 
 	//Новый синтаксис инициализации состояния -
 	//без конструктора
@@ -24,12 +30,14 @@ class Article extends Component {
 	}
 
 	render(){
-		const {article} = this.props
+    const {article} = this.props
+    // false + smth = false
+    // true + smth = smth
 		const content = this.state.isOpen && <section>{article.content}</section>
 		return (
 			<div>
 				<h2>{article.title}<button onClick={this.handleClick}>Toggle</button></h2>
-				<section>{content}</section>
+			  {content}
 				<section>{(new Date(article.date)).toDateString()}</section>
 			</div>
 		)
@@ -43,11 +51,11 @@ class Article extends Component {
 	}
 }
 
-/*function handleClick(){
+/* function handleClickExternal(){
 	console.log("Toggled")
 	this.setState({
 		isOpen: !this.state.isOpen
 	})
-}*/
+} */
 
 export default Article

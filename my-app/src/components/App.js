@@ -26,7 +26,7 @@ function App() {
 	return (
 		<div>
 			<h1>My App</h1>
-			<Article article={articles[0]} demostring="demo string" demoflag />
+			<Article article={articles[0]} demostring="demo string"  />
 		</div>
 	)
 }
